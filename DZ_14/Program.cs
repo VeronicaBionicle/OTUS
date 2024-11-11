@@ -7,6 +7,31 @@ namespace DZ_14
     {
         static void Main(string[] args)
         {
+            // Тест для коллекции = null
+            try
+            {
+                List<int> nullList = null;
+                var partList = nullList.Top(10);
+                Console.WriteLine($"Top {10}% of list:\t{{{String.Join(", ", partList)}}}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            // Тест для пустой коллекции
+            try
+            {
+                var emptyList = new List<int>();
+                //List<int> emptyList = null;
+                var partList = emptyList.Top(10);
+                Console.WriteLine($"Top {10}% of list:\t{{{String.Join(", ", partList)}}}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             // Тесты для версии функции без входной Func
             var list = new List<int>{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             var percents = new List<int> { 0, 10, 20, 30, 33, 50, 80, 100, 101 };
