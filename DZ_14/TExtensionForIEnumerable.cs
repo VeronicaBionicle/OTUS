@@ -12,6 +12,7 @@ namespace DZ_14
             {
                 throw new ArgumentNullException($"Коллекция не должна быть равна null.");
             }
+            // ArgumentNullException.ThrowIfNull(data, nameof(data)); // Как вариант
             if (percent < 1)
             {
                 throw new ArgumentException($"Аргумент percent = {percent} должен быть больше 1.");

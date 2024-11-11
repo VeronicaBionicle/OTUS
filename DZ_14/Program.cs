@@ -33,7 +33,7 @@ namespace DZ_14
             }
 
             // Тесты для версии функции без входной Func
-            var list = new List<int>{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var list = new List<int>{ 1, 7, 8, 4, 5, 6, 2, 1, 9 };
             var percents = new List<int> { 0, 10, 20, 30, 33, 50, 80, 100, 101 };
 
             foreach (var percent in percents) 
